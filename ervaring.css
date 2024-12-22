@@ -92,3 +92,9 @@ a:hover{
     align-items: center;
     justify-content: center;
 }
+
+.grid-ervaring span {
+    font-style: italic;
+    color: gray;
+    font-size: 5px;
+}

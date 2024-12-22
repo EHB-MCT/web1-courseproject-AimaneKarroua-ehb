@@ -10,23 +10,29 @@ body {
     background-image: url(img/b652c2ed3137be0c5f50ebe34045f1c6.jpg);
     font-family: "Raleway";
 }
-
+ 
 .nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #000000;
-    
+    position: fixed;
+    width: 80%;
+    z-index: 1000;
+    top: 0;
 }
 
+span {
+    font-weight: bold;
+}
 
 .nav img {
-    width: 200px;
+    width: 150px;
 }
 
-li {
+.nav div {
     display: inline-block;
-    margin-right: 30px;
+    margin-right: 50px;
     font-size: 18px;
 }
 
@@ -36,10 +42,12 @@ a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
+    font-size: 18px;
 }
 
 a:hover{
     color: rgb(0, 255, 30);
+    transition: 0.3s;
 }
 
 .button {
@@ -55,14 +63,21 @@ a:hover{
     transition: 0.3s;
 }
 
-.maintext {
+.vet {
     color: rgb(0, 255, 30);
     font-size: 20px;
 }
 
+.text {
+    width: 150%;
+}
+
 .text h1 {
-    margin-top: 150px;
     font-size: 80px ;
+}
+
+.text h3 {
+    font-size: 15px;
 }
 
 .text p {
@@ -70,20 +85,177 @@ a:hover{
     font-size: 18px;
 }
 
-.nomain {
+.genie {
     font-weight: 500;
 }
 
-.exemples {
-    margin-top: 100px;
-}
-
 .maing {
+    margin-top: 18%;
     display: flex;
+    justify-content: space-between;
 }
 
-.rick-image {
+.maing img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    border-radius: 100%;
+    animation: float 3s ease-in-out infinite;
+    margin-left: 30%;
+    margin-top: 15%;
+}
+
+.maing .text img {
+    display: none;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.carrousel {
+    grid-auto-flow: column;
+    gap: 5%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    width: 80%;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    margin-right: 0;
+    margin-left: 10%;
+}
+
+
+.carrousel ::-webkit-scrollbar{
+    display: none;
+}
+
+.card {
+    scroll-snap-align: start;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 5% 10%;
+    border-radius: 30px;
+    min-height: 80%;
+    min-width: 80%;
+    transform: scale(1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.portal {
     position: absolute;
-    left: 70%;
-    top: 46%;
+    top: 160%;
+    left: 28%;
+    z-index: -100;
+    width: 40%;
+}
+
+.grid-ervaring {
+    margin-top: 40%;
+    background-image: url(img/portal.png);
+    background-size: 100%;
+    background: no-repeat;
+    z-index: 100;
+}
+
+.grid-ervaring h1 {
+    margin-top: 30px;
+    font-size: 30px;
+}
+
+.grid-ervaring h2 {
+    color: rgb(0, 255, 30);
+    font-size: 20px;
+}
+
+.notice {
+    font-style: italic;
+    color: gray;
+    font-size: 8px;
+}
+
+.icon {
+    display: none;
+}
+
+
+
+@media (max-width:810px) {
+    .text {
+        width: 100%;
+    }
+
+    .text p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .rick-image {
+        display: none;
+    }
+
+    .maing .text img {
+        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30%;
+        border-radius: 100%;
+        animation: float 3s ease-in-out infinite;
+        margin-left: 35%;
+        margin-top: -10%;
+    }
+
+    .icon {
+        display: block;
+        }
+
+    #menu {
+        display: none;
+        flex-direction: column;
+        background-color: #000;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        width:50%;
+        z-index: 1000;
+        text-align: center;
+        padding: 10px 0;
+        border-radius:5px
+    }
+
+    #menu a {
+        display: block;
+        padding: 10px;
+        font-size: 18px;
+        text-decoration: none;
+        color: white;
+    }
+    
+    #menu a:hover {
+        background-color: rgb(0, 176, 199);
+        color: black;
+        transition: 0.3s;
+    }
 }
