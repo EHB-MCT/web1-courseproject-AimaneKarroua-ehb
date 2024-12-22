@@ -11,15 +11,31 @@ body {
     font-family: "Raleway";
 }
  
+body .easter {
+    position: absolute;
+    z-index: -1000;
+    top: 30px;
+    left: -20%;
+    width: 120%;
+}
+
 .nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #000000;
-    position: fixed;
+    position: absolute;
     width: 80%;
+    margin-top: 15px;
     z-index: 1000;
     top: 0;
+}
+
+.actief{
+    color: rgb(0, 255, 30);
+}
+
+h2 {
+    color: rgb(0, 255, 30);
 }
 
 span {
@@ -164,7 +180,7 @@ a:hover{
 
 .portal {
     position: absolute;
-    top: 160%;
+    top: 30%;
     left: 28%;
     z-index: -100;
     width: 40%;
@@ -198,7 +214,9 @@ a:hover{
     display: none;
 }
 
-
+h4 {
+    color: rgb(0, 255, 30);
+}
 
 @media (max-width:810px) {
     .text {
@@ -212,6 +230,10 @@ a:hover{
     }
 
     .rick-image {
+        display: none;
+    }
+
+    .portal {
         display: none;
     }
 

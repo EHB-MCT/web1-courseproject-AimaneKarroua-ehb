@@ -4,16 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="vaardigheden.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="nav">
         <img class="LOGO" src="img/Rick_and_Morty_logo.png" alt="">
-        <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="ervaring.html">Ervaring</a></li>
-        <li><a class="button" href="vaardigheden.html">Vaardigheden</a></li>
-        </ul>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+        
+        <div id="menu">
+            <a href="index.html">Home</a>
+            <a href="ervaring.html">Ervaring</a>
+            <a class="actief" href="vaardigheden.html">Vaardigheden</a></li>
+        </div>
     </div>
+    <div>
+        <h1><br><br><br> Vaardigheden</h1>
+        <h2>Rick Sanchez verlegt de grenzen van wetenschap en technologie op de schaal van het multiversum.</h2>
+    </div>
+    <div class="">
+        <h3>Technische vaardigheden</h2>
+        <article class="cart">
+            <img src="img/vaardigheid/techniek.webp" alt="">
+            <h4>Interdimensionale techniek</h3>
+            <p>Creatie van revolutionaire apparaten zoals het Portaalpistool om tussen dimensies te reizen.</p>
+        </article>
+        <article class="cart">
+            <img src="" alt="">
+            <h4>Geavanceerde robotica</h3>
+            <p>Het ontwerpen van intelligente, autonome robots.</p>
+        </article>
+        <article class="cart">
+            <img src="" alt="">
+            <h4>Theoretische natuurkunde</h3>
+            <p>Complexe concepten toepassen om futuristische technologieën te ontwikkelen.</p>
+        </article>
+        <article class="cart">
+            <img src="" alt="">
+            <h4>Experimentele chemie</h3>
+            <p>Ontwikkeling van revolutionaire stoffen, zoals het onsterfelijkheidsserum.</p>
+        </article>
+        <article class="cart">
+            <img src="" alt="">
+            <h4>Biotechnologie en genetica</h3>
+            <p>Modificeren en klonen van levende organismen.</p>
+        </article>
+        <article class="cart">
+            <img src="" alt="">
+            <h3>Technologie voor tijdreizen</h3>
+            <p>Beheers het manipuleren van tijd met behulp van geavanceerde gadgets.</p>
+        </article>
+        <article class="cart">
+            <img src="" alt="">
+            <h4>Hernieuwbare energie</h3>
+            <p>Creatie van oneindige energiebronnen zoals de Microverse Batterij.</p>
+        </article>
+        <article class="cart">
+            <img src="" alt="">
+            <h4>Ontwikkeling van kunstmatige intelligentie</h3>
+            <p>Geavanceerde AI ontwerpen voor complexe taken.</p>
+        </article>
+    </div>
+    <script>
+        function myFunction() {
+    var menu = document.getElementById("menu");
+    if (menu.style.display === "block") {
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "block";
+    }
+
+    }
+    </script>
 </body>
 </html>
