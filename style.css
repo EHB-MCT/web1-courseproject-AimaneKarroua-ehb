@@ -9,6 +9,7 @@ body {
     margin-inline: 12%;
     background-image: url(img/b652c2ed3137be0c5f50ebe34045f1c6.jpg);
     font-family: "Raleway";
+    height: 100vh;
 }
  
 body .easter {
